@@ -26,6 +26,15 @@ public class RomanService {
     private String convert(int num) {
         List<Integer> keys = ROMAN_MAP.keySet().stream().sorted().toList();
         StringBuilder result = new StringBuilder();
+
+        /*
+                Для чисел больше 1000
+         */
+        while (num > keys.get(6)) {
+            result.append(ROMAN_MAP.get(keys.get(6)));
+            num = num - keys.get(6);
+        }
+
         for (int i = 0; i < keys.size(); i++) {
             int key = keys.get(i);
             if (key == num) {

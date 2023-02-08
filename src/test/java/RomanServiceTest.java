@@ -40,6 +40,11 @@ public class RomanServiceTest {
         test("DCLXVI", 666);
         test("CMXCIV", 994);
         test("MCMXCIV", 1994);
+        test("MM", 2000);
+        test("MMCMXCIV", 2994);
+        test("MMM", 3000);
+        test("MMMCMXCIX", 3999);
+
         System.out.println("***");
         System.out.println("Total: " + total + ", Success: " + success + ", Fail: " + fail);
     }
